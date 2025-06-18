@@ -9,13 +9,13 @@ export default function FB0529() {
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyCfPQNToGcXMI20vee6uXdOJBwLQy5W7LU",
-    authDomain: "nccu-113-2-gugu.firebaseapp.com",
-    projectId: "nccu-113-2-gugu",
-    storageBucket: "nccu-113-2-gugu.firebasestorage.app",
-    messagingSenderId: "25466300292",
-    appId: "1:25466300292:web:8f2b962c8250608c2adfd1",
-    databaseURL: "https://nccu-113-2-gugu-default-rtdb.firebaseio.com/"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL
   };
 
   // Initialize Firebase
