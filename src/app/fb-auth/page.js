@@ -10,14 +10,14 @@ import { useState, useEffect } from "react";
 export default function FBAuth() {
 
   const firebaseConfig = {
-    apiKey: "改成你自己的",
-    authDomain: "fir-demo-cc753.firebaseapp.com",
-    databaseURL: "改成你自己的",
-    projectId: "fir-demo-cc753",
-    storageBucket: "fir-demo-cc753.firebasestorage.app",
-    messagingSenderId: "547407373138",
-    appId: "1:547407373138:web:14b40e20e4b7fc773e108b",
-    measurementId: "G-9S4KKT964F"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
   };
 
   //判斷 app 是否已經初始化過，有初始化過就使用該 app
