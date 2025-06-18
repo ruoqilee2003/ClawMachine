@@ -29,7 +29,7 @@ export default function FBAuth() {
 
   const [user, setUser] = useState(null);
 
-  const auth = getAuth();
+  const auth = getAuth(app);
   auth.useDeviceLanguage();
 
 
