@@ -11,7 +11,7 @@ function ClawCamera({clawPos, setClawPos, isClawDown, setIsClawDown}){
 
 
     const speed = 0.05;
-    const limitX = 0.4;
+    const limitX = 0.3;
     const limitY = 0.4;
     
 
@@ -20,13 +20,13 @@ function ClawCamera({clawPos, setClawPos, isClawDown, setIsClawDown}){
 
         if(!isClawDown){
             if(forward){
-                if(clawPos.z < -limitY){
+                if(clawPos.z > -limitY){
                     setClawPos({x:clawPos.x, y:clawPos.y, z:clawPos.z - speed});
                 }
             }
     
             if(backward){
-                if(clawPos.z > limitY){
+                if(clawPos.z < limitY){
                     setClawPos({x:clawPos.x, y:clawPos.y, z:clawPos.z + speed});
                 }
             }

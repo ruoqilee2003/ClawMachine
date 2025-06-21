@@ -128,18 +128,100 @@ function Camera({setClawPos, boxRef, clawPos, isLowering, setIsLowering, hasPriz
               if(isWin){
                 console.log("中獎");
                 Swal.fire({
-                  title: '中獎了',
-                  text: '恭喜你中獎了',
-                  icon: 'success',
-                  confirmButtonText: '確定'
+                  html: `
+                    <div style="
+                      text-align: center;
+                      margin-bottom: 2rem;
+                    ">
+                      <div style="
+                        display: inline-block;
+                        font-size: 3.5rem; 
+                        font-weight: 900; 
+                        color: white;
+                        -webkit-text-stroke: 3px transparent;
+                        background: linear-gradient(to right, #FFBDDB, #AFCEFA);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                        font-family: 'Arial Black', Gadget, sans-serif;
+                        position: relative;
+                        filter: drop-shadow(0 0 0 #FFBDDB) drop-shadow(1px 1px 0 #AFCEFA) drop-shadow(2px 2px 0 #FFBDDB);
+                      ">Claw Machine</div>
+                    </div>
+                    <div style="
+                      background: white; 
+                      padding: 2.5rem; 
+                      border-radius: 30px; 
+                      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.08);
+                      color: #3e3e3e;
+                      width: 420px;
+                      margin: 0 auto;
+                    ">
+                      <div style="text-align: center; font-size: 1.2rem; line-height: 1.6;">
+                        <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem; font-weight: bold; color: #3e3e3e;">中獎了！</h3>
+                        <p style="margin: 0.5rem 0;">恭喜你中獎了！</p>
+                      </div>
+                    </div>
+                  `,
+                  background: 'transparent',
+                  customClass: {
+                      popup: 'custom-swal-popup',
+                      confirmButton: 'custom-swal-button-cancel',
+                      actions: 'custom-swal-actions',
+                      htmlContainer: 'custom-swal-html-container'
+                  },
+                  confirmButtonText: '確定',
+                  backdrop: false,
+                  buttonsStyling: false,
                 });
               }else{
                 console.log("沒中獎");
                 Swal.fire({
-                  title: '沒中獎',
-                  text: '再接再厲',
-                  icon: 'error',
-                  confirmButtonText: '確定'
+                  html: `
+                    <div style="
+                      text-align: center;
+                      margin-bottom: 2rem;
+                    ">
+                      <div style="
+                        display: inline-block;
+                        font-size: 3.5rem; 
+                        font-weight: 900; 
+                        color: white;
+                        -webkit-text-stroke: 3px transparent;
+                        background: linear-gradient(to right, #FFBDDB, #AFCEFA);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                        font-family: 'Arial Black', Gadget, sans-serif;
+                        position: relative;
+                        filter: drop-shadow(0 0 0 #FFBDDB) drop-shadow(1px 1px 0 #AFCEFA) drop-shadow(2px 2px 0 #FFBDDB);
+                      ">Claw Machine</div>
+                    </div>
+                    <div style="
+                      background: white; 
+                      padding: 2.5rem; 
+                      border-radius: 30px; 
+                      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.08);
+                      color: #3e3e3e;
+                      width: 420px;
+                      margin: 0 auto;
+                    ">
+                      <div style="text-align: center; font-size: 1.2rem; line-height: 1.6;">
+                        <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem; font-weight: bold; color: #3e3e3e;">沒中獎</h3>
+                        <p style="margin: 0.5rem 0;">再接再厲！</p>
+                      </div>
+                    </div>
+                  `,
+                  background: 'transparent',
+                  customClass: {
+                      popup: 'custom-swal-popup',
+                      confirmButton: 'custom-swal-button-cancel',
+                      actions: 'custom-swal-actions',
+                      htmlContainer: 'custom-swal-html-container'
+                  },
+                  confirmButtonText: '確定',
+                  backdrop: false,
+                  buttonsStyling: false,
                 });
               }
             });
